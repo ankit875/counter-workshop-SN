@@ -16,6 +16,7 @@ mod counter_contract {
     }
     #[abi(embed_v0)]
     fn get_counter(self: ContractState) -> u32{
-        self.counter.read()
+       let value = self.counter.read();
+        value
     }
 }
