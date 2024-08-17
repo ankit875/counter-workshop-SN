@@ -1,7 +1,7 @@
 use starknet::{ContractAddress};
 use snforge_std::{declare, cheatcodes::contract_class::ContractClassTrait};
 
-mod Accounts {
+pub mod Accounts {
     use starknet::{ContractAddress};
     use starknet::contract_address_const;
 
@@ -13,10 +13,10 @@ mod Accounts {
         contract_address_const::<'new_owner'>()
     }
 
-    fn BAD_ACTOR() -> ContractAddress {
+    pub fn BAD_ACTOR() -> ContractAddress {
         contract_address_const::<'bad_actor'>()
     }
-    fn ZERO() -> ContractAddress {
+    pub fn ZERO() -> ContractAddress {
         contract_address_const::<0>()
     }
 }
